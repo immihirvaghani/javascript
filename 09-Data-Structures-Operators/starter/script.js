@@ -42,14 +42,55 @@ const restaurant = {
       `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+
+  orderPizza: function(mainIngredient, ...otherIngredients){
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  }
 };
 
-// Spread coz right side
-const arr = [1, 2, ...[3, 4]];
+ 
 
-// Rest coz on left of = sign
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others); 
+// restaurant.orderPizza('mashrooms', 'onions', 'spnach');
+
+// Destructuring
+// console.log(3 || 'Jonas');
+// console.log(undefined || null);
+
+// restaurant.numGuests = 23; 
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
+
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests2);
+
+ 
+
+// // Spread coz right side
+// const arr = [1, 2, ...[3, 4]];
+
+// // Rest coz on left of = sign
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
+
+// const [pizza, , rissotto, ...other] = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(pizza, rissotto, other);
+
+// Functions
+// const add = function(...numbers){
+//   let sum = 0;
+//   for(let i = 0; i<numbers.length; i++){
+//     sum += numbers[i]
+//   }
+//   console.log(sum);
+// };
+
+// const x = [23, 5, 7];
+// add(...x)
+
+// rest objects
+// const {sat, ...weekdays} = restaurant.openingHours;
+// console.log(sat, weekdays);
 
 // const arr = [7, 8, 9];
 // const badNewArray = [1, 2, arr[0], arr[1], arr[2]];
